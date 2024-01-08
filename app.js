@@ -9,7 +9,6 @@ function generarAleatorio(cotaSuperior,cotaInferior){
 let aleatorio = generarAleatorio(10,1);
 alert("Bienvenido al juego, trata de adivinar el numero generado al azar del 1 al 10. Tienes 5 Intentos");
 
-
 /***La funcion validara que no se ingresen numeros numeros fueras de las cotas, ni espacios vacios, ni strings 
  * 2- valor fuera de las cotas sup-inf
  * 1- No es un numero
@@ -29,6 +28,7 @@ let funcionValidar = (caracterAValidar,cotaSuperior,cotaInferior) => {
 }
 for(let i=0; i<contadorDeVidas;i++){
     let numero = parseInt(prompt("Ingresa un numero del 1 al 10."));
+    // el bucle verifica que el valor ingresado sea valido.
     while(funcionValidar(numero,10,1) != 0 ){
         numero = parseInt(prompt("Ingresa un numero del 1 al 10."));
     }
